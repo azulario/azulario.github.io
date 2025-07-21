@@ -1,0 +1,180 @@
+
+ 
+:root {
+    --primary-color: #28292E;
+
+    --primary-bg-color: #FBEAD6;
+    --secondary-bg-color: #7AA4AD;
+    --border-color: #7AA4AD;
+    
+    --tittle-color:#28292E;
+    --primary-text-color: #28292E;
+    --link-color: #28292E;
+    --button-text-color: #FBEAD6;
+    --icon-color: linear-gradient(45deg, #0A2A66, #1454CC);
+
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: var(--primary-bg-color);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+
+.day-night {
+    display: flex;
+    width: 375px;
+    padding: 40px 32px 0px 32px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 267px;
+}
+
+.day-night-button {
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .day-night-button .bi {
+    font-size: 24px;
+    aspect-ratio: 1/1;
+    flex-shrink: 0;
+    border: none;
+    background: var(--icon-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+.cta-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.cta-buttons .i {
+    font-size: 24px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    border: none;
+    font-style: normal;
+}
+
+.cta-buttons button {
+    display: flex;
+    padding: 4px 16px;
+    justify-content: center;
+    align-items: center;
+    background: var(--link-color);
+    color: var(--button-text-color);
+    text-align: center;
+    font-family: "Roboto Condensed";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    gap: 10px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    align-self: stretch;
+}
+
+.header-imgs {
+    width: 265px;
+    height: 398px;
+}
+
+.header-imgs__onca {
+    width: 265px;
+    height: 375px;
+    flex-shrink: 0;
+    aspect-ratio: 53/75;
+    z-index: 1;
+    animation: 1.31s linear 0s 1 normal forwards running oncadancarina_4;
+	transform-box: fill-box;
+	transform-origin: 50% 50%;
+} 
+
+@keyframes oncadancarina_4 {
+	0% {
+        transform: scale(0.7) translateY(0px) rotate(0deg);
+        opacity: 0;
+      }
+      20% {
+        transform: scale(1) translateY(-20px) rotate(10deg);
+        opacity: 1;
+      }
+      40% {
+        transform: scale(1) translateY(0px) rotate(-10deg);
+      }
+      60% {
+        transform: scale(1) translateY(0px) rotate(10deg);
+      }
+      80% {
+        transform: scale(1) translateY(0px) rotate(-5deg);
+      }
+      100% {
+        transform: scale(1) translateY(0px) rotate(0deg);
+        opacity: 1;
+      }
+    }
+
+@keyframes starburst-in {
+    0% {
+      left: 350px;
+      top: -70px;
+      transform: rotate(0deg);
+      opacity: 0;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      left: 200px;
+      top: -70px;
+      transform: rotate(-360deg);
+      opacity: 1;
+    }
+  }
+
+.header-imgs__starburst {
+    width: 86.192px;
+    height: 82px;
+    flex-shrink: 0;
+    aspect-ratio: 86.19/82.00;
+    z-index: 2;
+    position: relative;
+    left: 200px;
+    top: -70px;
+    animation: starburst-in 1.2s cubic-bezier(0.77,0,0.175,1) forwards;
+}
+
+.header-imgs__azulario {
+    width: 299px;
+    height: 40px;
+}
