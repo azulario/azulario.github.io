@@ -1,5 +1,12 @@
 
 /* Fade-in de baixo pra cima */
+.fadeInUp {
+    animation: fadeInUp 0.8s ease-in forwards;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-in, transform 0.8s ease-in;
+  }
+
 @keyframes fadeInUp {
     from {
       opacity: 0;
@@ -10,11 +17,40 @@
       transform: translateY(0);
     }
   }
-  
-  .animate-fadeInUp {
-    animation: fadeInUp 0.8s ease-out forwards;
-    opacity: 0;
+
+  .imageReveal {
+    animation: imageReveal both;
+    animation-timeline: view(10% 5%);
+
   }
+
+  @keyframes imageReveal {
+    from {
+      filter: saturate(0) contrast(4) brightness(.1) blur(5px);
+      opacity: 0;
+      scale: .95;
+      translate: 0 4rem;
+    }
+    to {
+      filter: none;
+      opacity: 1;
+      scale: 1;
+      translate: 0 0;
+    }
+
+  }
+
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+  
   
   @keyframes oncadancarina_4 {
 	0% {
@@ -56,4 +92,23 @@
       transform: rotate(-360deg);
       opacity: 1;
     }
+
   }
+
+  @keyframes starburst-in-large {
+    0% {
+        left: 800px; /* Ajuste para a posição inicial em telas maiores */
+        top: -190px;
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        left: 420px; /* Ajuste para a posição final em telas maiores */
+        top: -190px;
+        transform: rotate(-360deg);
+        opacity: 1;
+    }
+}
