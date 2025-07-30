@@ -1,3 +1,4 @@
+
 :root {
     --primary-color: #28292E;
 
@@ -9,8 +10,22 @@
     --primary-text-color: #28292E;
     --link-color: #28292E;
     --button-text-color: #FBEAD6;
-    --icon-color: linear-gradient(45deg, #0A2A66, #1454CC);
+    --icon-color: #1454CC;
 
+}
+
+[data-theme="dark"] {
+    --primary-color: #FBEAD6;
+
+    --primary-bg-color: #2B2D42;
+    --secondary-bg-color: #2E62A3;
+    --border-color: #3677c6;
+
+    --tittle-color:#FBEAD6;
+    --primary-text-color: #FBEAD6;
+    --link-color: #FBEAD6;
+    --button-text-color: #2B2D42;
+    --icon-color: #FBEAD6;
 }
 
 body {
@@ -21,11 +36,11 @@ body {
 
 body::after {
     content: "";
-    pointer-events: none; /* Permite clicar nos elementos abaixo */
+    pointer-events: none; 
     position: fixed;
     inset: 0;
-    z-index: 9999; /* Ajuste se necessário, mas mantenha acima do conteúdo */
-    opacity: 0.3; /* Intensidade do ruído, ajuste como quiser */
+    z-index: 9999; 
+    opacity: 0.3; 
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='noise'><feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23noise)' opacity='1'/></svg>");
     background-repeat: repeat;
     background-size: 300px 300px;
@@ -55,7 +70,7 @@ a {
 }
 
 .header-nav--mobile {
-    width: 100%;
+    width: 100vw;
     z-index: 1000; /* Garante que o menu fique acima de outros elementos */
 }
 
@@ -63,17 +78,20 @@ a {
     display: flex;
     align-items: center;
     background-color: var(--border-color);
+    width: 100%;
 }
 
 .menu--mobile {
     justify-content: space-between;
-    width: 100vw;
     position: fixed;
     bottom: 0;
 }
 
-.menu__item:hover {
-    border-bottom: #0A2A66 2px solid;
+.menu__item:hover,
+.menu__item:focus    {
+    border-bottom: 2px solid var(--icon-color);
+    transform: translateY(-6px);
+    transition: transform 0.15s, box-shadow 0.15s;
 }
 
 .menu--mobile .menu__link {
@@ -81,9 +99,20 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: auto;
-    padding: .5rem 1rem;
 
+}
+
+.menu__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: .6rem 1rem;
+}
+
+.menu__item {
+    width: 100%;
 }
 
 .menu__icon,
@@ -96,12 +125,12 @@ a {
 
 
 .menu__icon {
-    font-size: 2.5rem;
+    font-size: 1.6rem;
     flex-shrink: 0;
 }
 
 .menu__text {
-    font-size: 1rem;
+    font-size: .8rem;
     font-weight: 400;
     text-transform: uppercase;
 }
@@ -135,47 +164,55 @@ a {
     -webkit-text-fill-color: transparent;
   }
 
+
+  /* === CTAs Unificados === */
+
+
+.cta-buttons, .cta-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .cta-buttons {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 32px;
-    position: relative;
+  gap: 2rem;
+  width: 100%;
 }
 
-.cta-buttons:hover {
-    color: var(--icon-color);
+.cta-button {
+  background: var(--link-color);
+  color: var(--button-text-color);
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  padding: .5rem .8rem;
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+  text-decoration: none;
+  position: relative;
+}
+
+.cta-button i {
+  font-size: 1em;
+  margin-right: 6px;
+  display: inline-flex;
+  align-items: center;
+  color: var(--button-text-color) !important;
+  background: none;
 }
 
 
-.cta-buttons .i {
-    font-size: 24px;
-    flex-shrink: 0;
-    aspect-ratio: 1/1;
-    border: none;
-    font-style: normal;
-    font-weight: 600;
+.cta-button:hover,
+.cta-button:focus {
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: rotate(-5deg);
+    transition: transform 0.15s ease-in-out;
 }
 
-.cta-buttons button {
-    display: flex;
-    flex-direction: row;
-    padding: 4px 16px;
-    justify-content: center;
-    align-items: center;
-    background: var(--link-color);
-    color: var(--button-text-color);
-    text-align: center;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-    text-transform: uppercase;
-    border: none;
-    gap: 10px;
-    cursor: pointer;
-}
 
 .bi-star-fill {
     color: var(--link-color);
@@ -258,7 +295,7 @@ main {
 
 /* Estilo para o H2 da seção de apresentação */
 h2.presentation-title {
-    color: #28292E;
+    color: var(--primary-text-color);
     text-align: center;
     font-size: 9px;
     font-style: normal;
@@ -322,18 +359,21 @@ h2.presentation-title {
 
 }
 
-.social-midia .midia-icon {
+.midia-icon {
     font-size: 32px;
     cursor: pointer;
-}
-
-.social-midia a {
+    background: none;
+    padding: 0;
+    border: none;
     color: var(--primary-text-color);
     text-decoration: none;
 }
 
-.midia-icon:hover {
-    color: var(--icon-color);
+
+.social-midia .midia-icon:hover,
+.social-midia .midia-icon:focus {
+    transform: translateY(-6px);
+    transition: transform 0.15s, box-shadow 0.15s;
 }
 
 .projects {
@@ -397,7 +437,7 @@ h2.projects-title {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 1rem;
     gap: 32px;
     align-self: stretch;
 }
@@ -492,7 +532,7 @@ h2.cta-projects-text {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2.5rem;
+    padding: 2.5rem 2rem;
     gap: 32px;
     align-self: stretch;
 }
@@ -581,7 +621,8 @@ h2.cta-projects-text {
     height: 100px;
 }
 
-.ending p {
+.ending p,
+.ending i {
     color: var(--primary-text-color);
     text-align: center;
     font-size: 16px;
@@ -628,7 +669,7 @@ footer a:hover {
 .footer-content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 40px;
     align-self: stretch;
 }

@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Título otimizado para SEO, incluindo localização e palavras-chave -->
     <title>Azulario Tattoo | Tatuagens Geeks e Coloridas em Londrina - PR</title>
     <!-- Descrição otimizada para SEO, com palavras-chave e CTA -->
-    <meta name="description" content="Oi, eu sou a Nathalia, também conhecida como Azulario. Sou tatuadora em Londrina, PR, especializada em tatuagens coloridas com foco em temáticas geek, otaku e da cultura pop. Transformo suas histórias favoritas em arte viva, com cuidado, cor e significado. Agende sua tattoo! Vamos criar algo único e especial para você.">
+    <meta name="description" content="Oi, eu sou a Nathalia, também conhecida como Azulario. Sou tatuadora em Londrina, PR, especializada em tatuagens coloridas com foco em temáticas geek, otaku e da cultura pop. Transformo suas histórias favoritas em arte, com cuidado e muita cor. Agende sua tattoo! Vamos criar algo único e especial para você.">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
     <!-- Fontes e Estilos -->
-    <link rel="stylesheet" href="/assets/css/fonts.css">
+    <link rel="stylesheet" href="/assets/css/reset.css">
     <link rel="stylesheet" href="/assets/css/style.css">
 
     <!-- Responsividade -->
@@ -70,29 +70,30 @@
     <div class="container">
         <nav class="header-nav" aria-label="Navegação Inicial">
             <div class="day-night">
-                <button class="day-night-button">
-                    <p class="bi bi-moon-stars"></p>
-                </button>
+                <a class="day-night-button">
+                    <i id="toggleTheme" class="bi bi-moon-stars"></i>
+                </a>
             </div>
             <div class="cta-buttons">
-                <button class="cta-whatsapp">
-                    <a href="https://wa.link/uy71hs">
-                        <i class="bi bi-whatsapp"></i>
-                        Tatue comigo
-                    </a>
-                </button>
-                <button class="cta-insta">
-                    <a href="https://www.instagram.com/azulario/">
-                        <i class="bi bi-instagram"></i>
-                        Me segue lá
-                    </a>
-                </button>
+                <a class="cta-button whatsapp" href="https://wa.link/uy71hs">
+                    <i class="bi bi-whatsapp"></i>
+                    Tatue comigo
+                </a>
+                <a class="cta-button insta" href="https://www.instagram.com/azulario/">
+                    <i class="bi bi-instagram"></i>
+                    Me segue lá
+                </a>
             </div>
         </nav>
 
         <nav class="header-nav--mobile" aria-label="Menu de navegação móvel">
             <ul class="menu menu--mobile" aria-label="Menu de navegação">
                 <li class="menu__item">
+                    <a class="menu__link" href="#home">
+                        <i class="menu__icon bi bi-house-heart"></i>
+                        <span class="menu__text">Início</span>
+                    </a>
+                </li> <li class="menu__item">
                     <a class="menu__link" href="#about-me">
                         <i class="menu__icon bi bi-file-person-fill"></i>
                         <span class="menu__text">Sobre</span>
@@ -105,39 +106,50 @@
                     </a>
                 </li>
                 <li class="menu__item">
-                    <a class="menu__link" href="#location">
-                        <i class="menu__icon bi-geo-alt-fill"></i>
-                        <span class="menu__text">Localização</span>
-                    </a>
-                </li>
-                <li class="menu__item">
                     <a class="menu__link" href="#faq">
                         <i class="menu__icon bi bi-question-octagon"></i>
                         <span class="menu__text">FAQ</span>
                     </a>
                 </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#location">
+                        <i class="menu__icon bi-geo-alt-fill"></i>
+                        <span class="menu__text">Localização</span>
+                    </a>
+                </li>
+
+
             </ul>
         </nav>
 
-        <header>
+        <header id="home" aria-label="Cabeçalho com imagens e logo Azulario Tattoo">
             <div class="header-imgs">
                 <img src="/assets/imgs/ilustras/onça-dançarina.png" alt="Onça dançarina com tatuagens geeks" class="header-imgs__onca">
-                <img src="/assets/imgs/starburst/Starburst - Dia.png" alt="Fundo de estrela com tema de tatuagem geek e otaku" class="header-imgs__starburst">
+
+                <img id="starburstImg" src="/assets/imgs/starburst/Starburst - Dia.png" alt="Fundo de estrela com tema de tatuagem geek e otaku" class="header-imgs__starburst">
+
             </div>
-            <!-- O logo Azulario agora está dentro de um H1 para melhor SEO, mantendo o estilo visual -->
+
             <h1 class="header-imgs__azulario fadeInUp" aria-label="Azulario Tattoo - Tatuagens Geeks e Coloridas em Londrina">
-                <img src="/assets/imgs/texto-azulario-dia/header.png" alt="Logo Azulario Tattoo - Tatuagens geeks e coloridas em Londrina, PR, por Nathalia Veiga">
+                <img id="azularioLogo" src="/assets/imgs/texto-azulario-dia/header.png" alt="Logo Azulario Tattoo - Tatuagens geeks e coloridas em Londrina, PR, por Nathalia Veiga">
             </h1>
         </header>
 
         <main>
              <i class="bi bi-star-fill fadeInUp " aria-hidden="true"></i>
+
             <section class="presentation" aria-label="Apresentação da tatuadora Nathalia Veiga">
-              <h2 class="presentation-title fadeInUp">Transformo Suas Histórias Favoritas em Arte Viva.</h2>     
+
+              <h2 class="presentation-title fadeInUp">Transformo Suas Histórias Favoritas em Arte Viva.</h2>
+
               <div class="about-me" id="about-me" aria-label="Sobre a tatuadora Nathalia Veiga">
+
                 <img class="presentation-img fadeInUp" src="/assets/imgs/tattoer-photo/nathinha.png" alt="Tatuadora Nathalia Veiga sorrindo, especialista em tatuagens geeks e coloridas em Londrina, PR">
+
                 <div class="about-me-text" aria-label="Texto sobre Nathalia Veiga">
+
                   <h2 class="fadeInUp">Oi, eu sou a Nathalia! Mas talvez você me conheça como Azulario.</h2>
+
                   <p class="fadeInUp">
                     Sou artista e tatuadora especializada em tatuagens coloridas com foco em temáticas geek, otaku e da cultura pop. Desde os animes e games que marcaram minha infância até os filmes, personagens e universos fantásticos que compartilho com meus clientes — tudo isso alimenta meu trabalho. Não é só sobre tatuar: é sobre eternizar no corpo aquilo que te move por dentro.
                   </p>
@@ -153,8 +165,11 @@
                   <p class="fadeInUp">
                     Se você busca uma tatuagem que represente quem você é, com cor, cuidado e significado — e sentiu que nossas referências se cruzam — me chama. Porque acho que você chegou no lugar certo.
                   </p>
+
                 </div>
+
               </div>
+
               <div class="social-midia fadeInUp" aria-label="Redes sociais de Nathalia Veiga">
                 <a class="bi bi-whatsapp midia-icon" href="https://wa.link/uy71hs" aria-label="WhatsApp Azulario Tattoo"></a>
                 <a class="bi bi-instagram midia-icon" href="https://www.instagram.com/azulario/" aria-label="Instagram Azulario Tattoo"></a>
@@ -162,11 +177,8 @@
                 <a class="bi bi-behance midia-icon" href="https://www.behance.net/azulario" aria-label="Behance Azulario Tattoo"></a>
               </div>
               <div class="cta-buttons animate-fadeInUp" aria-label="Botões de chamada para ação">
-                <a href="#projects">
-                  <button class="portifolio-button" aria-label="Veja alguns projetos de tatuagem">
-                    Alguns projetos
-                    <i class="bi bi-arrow-down"></i>
-                  </button>
+                <a href="#projects" class="cta-button portfolio" aria-label="Veja alguns projetos de tatuagem">
+                  <i class="bi bi-arrow-down"></i> Alguns projetos
                 </a>
               </div>
             </section>
@@ -219,23 +231,12 @@
             <div class="cta-projects" aria-label="Chamada para ação após a galeria de projetos">
                 <h2 class="cta-projects-text">Gostou? Essas são apenas algumas das tattoos que fiz. Vamos criar a sua também!</h2>
                 <div class="cta-buttons">
-                    <button class="cta-whatsapp" aria-label="Agende sua tattoo pelo WhatsApp">
-                        <a href="https://wa.link/uy71hs">
-                            <i class="bi bi-whatsapp"></i>
-                            Agende sua tattoo
-                        </a>
-                        
-                    </button>
-                </div>
-                <h2 class="cta-projects-text">Quer ver mais tatuagens como essa?</h2>
-                 <div class="cta-buttons">
-                    <button class="cta-insta" aria-label="Veja mais tatuagens no Instagram">
-                        <a href="https://www.instagram.com/azulario/">
-                            <i class="bi bi-instagram"></i>
-                            Me segue lá
-                        </a>
-                        
-                    </button>
+                  <a href="https://wa.link/uy71hs" class="cta-button whatsapp" aria-label="Agende sua tattoo pelo WhatsApp">
+                    <i class="bi bi-whatsapp"></i> Agende sua tattoo
+                  </a>
+                  <a href="https://www.instagram.com/azulario/" class="cta-button instagram" aria-label="Veja mais tatuagens no Instagram">
+                    <i class="bi bi-instagram"></i> Me segue lá
+                  </a>
                 </div>
             </div>
 
@@ -294,29 +295,6 @@
                
             </div>
 
-            <i class="bi bi-star-fill" aria-hidden="true"></i>
-
-             <div class="cta-faq" aria-label="Chamada para ação após as perguntas frequentes">
-                    <p class="cta-faq-text">Ainda ficou com alguma dúvida?</p>
-                    <div class="cta-buttons">
-                        <button class="cta-whatsapp" aria-label="Agende sua tattoo pelo WhatsApp">
-                            <a href="https://wa.link/uy71hs">
-                                <i class="bi bi-whatsapp"></i>
-                                Agende sua tattoo
-                            </a>
-                        </button>
-                    </div>
-                    <div class="cta-buttons">
-                        <button class="cta-insta" aria-label="Veja mais trabalhos no Instagram">
-                            <a href="https://www.instagram.com/azulario/">
-                                <i class="bi bi-instagram"></i>
-                               Me segue lá
-                            </a>
-                            
-                        </button>
-                    </div>
-                </div>
-
              <i class="bi bi-star-fill" aria-hidden="true"></i>
 
             <section class="location" id="location" aria-label="Localização do Estúdio Caos em Londrina, Paraná, Brasil">
@@ -348,10 +326,28 @@
 
             <i class="bi bi-star-fill" aria-hidden="true"></i>
 
+             <div class="cta-faq" aria-label="Chamada para ação após as perguntas frequentes e localização">
+
+                    <p class="cta-faq-text">Ainda ficou com alguma dúvida?</p>
+                    <p class="cta-faq-text">Me chama lá!</p>
+                    <div class="cta-buttons">
+                      <a href="https://wa.link/uy71hs" class="cta-button whatsapp" aria-label="Agende sua tattoo pelo WhatsApp">
+                        <i class="bi bi-whatsapp"></i> whatsapp
+                      </a>
+                      <a href="https://www.instagram.com/azulario/" class="cta-button instagram" aria-label="Veja mais trabalhos no Instagram">
+                        <i class="bi bi-instagram"></i> Instagram
+                      </a>
+                    </div>
+
+                </div>
+
+            <i class="bi bi-star-fill" aria-hidden="true"></i>
+
             <div class="ending">
                 <img src="/assets/imgs/ilustras/trige-alucinado.png" alt="Tigre alucinado, ilustração de Azulario Tattoo">
                 <p>Obrigada por acompanhar o meu trabalho!
                 Fiz essa página com carinho pra vocês que me ajudaram a chegar até aqui. </p>
+
                 <i class="bi bi-suit-heart-fill"></i>
             </div>
         </main>
@@ -384,7 +380,7 @@
                     </nav>
                 </div>
                     <h2 class="brand-text" aria-label="Azulario Tattoo - Marca registrada">
-                        <img src="/assets/imgs/texto-azulario-dia/footer.png" alt="Logo Azulario Tattoo - Tatuagens geeks e coloridas em Londrina, PR, por Nathalia Veiga">
+                        <img id="footerLogo" src="/assets/imgs/texto-azulario-dia/footer.png" alt="Logo Azulario Tattoo - Tatuagens geeks e coloridas em Londrina, PR, por Nathalia Veiga">
                     </h2>
             </div>
         </footer>

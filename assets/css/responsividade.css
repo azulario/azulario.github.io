@@ -151,6 +151,11 @@
         gap: 3.5rem;
     }
 
+    footer {
+        padding: 5rem 3.5rem;
+        gap: 3.5rem;
+    }
+
     .brand-text {
         padding: 4rem; /* Remove o padding para evitar espaçamento extra */
     }
@@ -200,11 +205,31 @@
         gap: 3.5rem;
     }
 
-    footer {
-        padding: 5rem 3.5rem;
-        gap: 3.5rem;
-    }
+   
 
     
 
+}
+
+@media screen and (min-width: 1080px) {
+   .header-imgs__azulario {
+        padding: 7rem;
+    }
+
+    .brand-text {
+        padding: 7rem; /* Remove o padding para evitar espaçamento extra */
+    }
+}
+
+
+
+@media screen and (min-width: 1200px) {
+   h2.presentation-title {
+        font-size: 1rem;
+    }
+
+    h2.projects-title {
+        font-size: 1rem;
+    }
+    
 }
