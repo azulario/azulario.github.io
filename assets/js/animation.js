@@ -1,19 +1,3 @@
-// Adiciona a classe 'fadeInUp' quando o elemento entra na tela
-const fadeEls = document.querySelectorAll('.fadeInUp');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('is-visible');
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.1 });
-
-fadeEls.forEach(el => {
-  el.classList.remove('is-visible'); // Garante que começa invisível
-  observer.observe(el);
-});
-
         const toogleTheme = document.getElementById("toggleTheme");
         const rootHtml = document.documentElement;
 
@@ -39,9 +23,9 @@ fadeEls.forEach(el => {
         // Função para aplicar as imagens do tema atual
         function applyThemeImages() {
             const currentTheme = rootHtml.getAttribute("data-theme");
-            azularioLogo.src = imagePaths[currentTheme].azulario;
-            starburstImg.src = imagePaths[currentTheme].starburst;
-            footerLogo.src = imagePaths[currentTheme].footer;
+            if (azularioLogo) azularioLogo.src = imagePaths[currentTheme].azulario;
+            if (starburstImg) starburstImg.src = imagePaths[currentTheme].starburst;
+            if (footerLogo) footerLogo.src = imagePaths[currentTheme].footer;
         }
 
         function changeTheme() {
@@ -65,12 +49,23 @@ fadeEls.forEach(el => {
         }
 
         // Adiciona o event listener ao botão
-        toogleTheme.addEventListener("click", changeTheme);
+        if (toogleTheme) {
+            toogleTheme.addEventListener("click", changeTheme);
+        }
 
-        // Aplica as imagens do tema inicial quando a página carrega
-        document.addEventListener("DOMContentLoaded", applyThemeImages);
+        // --- Lógica das Animações de Entrada ---
+        document.addEventListener("DOMContentLoaded", () => {
+            // Seleciona todos os elementos que devem animar ao carregar
+            const elementsToAnimate = document.querySelectorAll(".fade-in-initial-hidden");
 
-        // Placeholder para o arquivo animation.js, caso você o tenha.
-        // Se houver animações, você pode adicioná-las aqui ou manter o arquivo separado.
-        // Por enquanto, deixei um console.log para indicar que o script está sendo carregado.
-        console.log("animation.js loaded (or placeholder)");
+            elementsToAnimate.forEach((element, index) => {
+                // Usa um pequeno timeout para garantir que o navegador renderizou o estado inicial
+                // antes que a classe de animação seja adicionada. Isso ajuda a disparar a animação.
+                // Adiciona um pequeno atraso para um efeito escalonado mais agradável.
+                setTimeout(() => {
+                    element.classList.remove("fade-in-initial-hidden");
+                    element.classList.add("fadeInUp-active"); // Adiciona a classe de animação ativa
+                }, 50 + (index * 50)); // Começa após 50ms, depois 50ms de atraso por elemento
+            });
+        });
+        // --- Fim da Lógica das Animações de Entrada ---

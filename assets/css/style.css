@@ -50,7 +50,7 @@ body::after {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 42px;
+    gap: .5rem;
     width: 100%;
     overflow-x: hidden;
 
@@ -60,6 +60,7 @@ body::after {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 1rem;
     gap: 42px;
     width: 100%;
 }
@@ -68,6 +69,10 @@ a {
     text-decoration: none;
     color: var(--button-text-color);
 }
+
+ .menu--desktop {
+  display: none;
+} 
 
 .header-nav--mobile {
     width: 100vw;
@@ -137,7 +142,7 @@ a {
 
 .day-night {
     display: flex;
-    width: 100%;
+    width: 100vw;
     padding: 40px 32px 0px 32px;
     justify-content: flex-end;
     align-items: center;
@@ -151,9 +156,16 @@ a {
     background: none;
     box-shadow: none;
     padding: 0;
+    cursor: pointer;
   }
 
-  .day-night-button .bi {
+.day-night-button:hover,
+.day-night-button:focus {
+    transform: scale(1.4);
+    transition: transform 0.15s ease-in-out;
+    }
+
+.day-night-button .bi {
     font-size: 24px;
     aspect-ratio: 1/1;
     flex-shrink: 0;
@@ -162,6 +174,7 @@ a {
     -webkit-background-clip: text;
     background-clip: text; /* Versão padrão para outros navegadores */
     -webkit-text-fill-color: transparent;
+    cursor: pointer;
   }
 
 
@@ -345,9 +358,6 @@ h2.presentation-title {
     text-align: center;
     font-size: 22px;
     font-style: normal;
-    font-weight: 700;
-    line-height: 98%; /* 23.92px */
-    letter-spacing: -0.078px;
 }
 
 .social-midia {
@@ -437,7 +447,7 @@ h2.projects-title {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 2rem 1rem;
     gap: 32px;
     align-self: stretch;
 }
@@ -737,10 +747,11 @@ footer a:hover {
     text-decoration: none;
 }
 
-.footer-social-media a:hover {
-    color: var(--icon-color);
+.footer-social-media a:hover,
+.footer-social-media a:focus {
+    transform: translateY(-6px);
+    transition: transform 0.15s, box-shadow 0.15s;
 }
-
 
 /* Estilo para o H2 que agora envolve a imagem do footer */
 .brand-text {
@@ -757,4 +768,26 @@ footer a:hover {
     object-fit: contain; /* Garante que a imagem se ajuste dentro do H1 */
     animation: fadeIn 1s ease-out forwards;
     opacity: 0; /* Garante que a imagem comece invisível */
+}
+
+ .fixed-whatsapp-button {
+    position: fixed;
+    bottom: 90px; /* Ajustado para ficar acima do menu mobile */
+    right: 20px;
+    background-color: var(--link-color); 
+    color: var(--button-text-color);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1001; /* Acima do menu mobile (z-index 1000) */
+    transition: transform 0.2s ease-in-out;
+}
+
+.fixed-whatsapp-button:hover {
+    transform: scale(1.3);
 }
