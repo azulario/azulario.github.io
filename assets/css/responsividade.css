@@ -64,7 +64,7 @@
 
     header {
         gap: 3.5rem;
-        padding: 14rem;
+        padding: 14rem 3.5rem 3rem 3.5rem;
     }
 
     .header-nav--mobile {
