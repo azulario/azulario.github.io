@@ -11,11 +11,14 @@ Landing page responsiva, moderna e otimizada para apresentar portfólio, informa
 ## 🩹 Cuidados com a Tatuagem
 Inclui uma seção dedicada a orientações e dicas de cuidados pós-tatuagem, para garantir a melhor cicatrização e durabilidade da sua arte. Todo o conteúdo foi elaborado com base na experiência da tatuadora e pensado para ajudar clientes de primeira viagem e veteranos.
 
+
 ## 🚀 Tecnologias Utilizadas
 - HTML5
 - CSS3 (incluindo responsividade e animações)
 - JavaScript
 - [Bootstrap Icons](https://icons.getbootstrap.com/)
+- [Font Awesome](https://fontawesome.com/) (ícones adicionais)
+- [Material Symbols Outlined](https://fonts.google.com/icons) (ícones adicionais)
 
 ## 📱 Responsividade
 O site se adapta a diferentes tamanhos de tela, exibindo menus e conteúdos otimizados para desktop e mobile.
@@ -45,5 +48,3 @@ Recomendado para hospedagem em serviços de páginas estáticas como GitHub Page
 ---
 Desenvolvido e ilustrado com carinho por Nathalia Veiga | Azulario Tattoo
 
----
-Feito com carinho por Nathalia Veiga | Azulario Tattoo
