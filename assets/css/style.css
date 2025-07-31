@@ -466,6 +466,7 @@ h2.cta-projects-text {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 2.5rem 2rem;
     gap: 32px;
     width: 100vw; 
 }
@@ -479,7 +480,7 @@ h2.cta-projects-text {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    max-width: 30rem; /* Limita a largura máxima do cartão */
+    max-width: 32rem; /* Limita a largura máxima do cartão */
 }
 
 .care-card-title {
@@ -524,6 +525,16 @@ h2.cta-projects-text {
     padding: 16px 32px;
     flex-direction: column;
     align-items: center;
+    gap: 32px;
+    align-self: stretch;
+}
+
+.cta-tattoocare {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem 2rem;
     gap: 32px;
     align-self: stretch;
 }
