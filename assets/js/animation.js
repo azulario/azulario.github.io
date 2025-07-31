@@ -1,4 +1,4 @@
-        const toogleTheme = document.getElementById("toggleTheme");
+        const toggleTheme = document.getElementById("toggleTheme");
         const rootHtml = document.documentElement;
 
         // Referências para as imagens que mudam com o tema
@@ -44,13 +44,13 @@
             applyThemeImages();
 
             // A lógica de toggle do ícone já estava correta
-            toogleTheme.classList.toggle("bi-sun");
-            toogleTheme.classList.toggle("bi-moon-stars");
+            toggleTheme.classList.toggle("bi-sun");
+            toggleTheme.classList.toggle("bi-moon-stars");
         }
 
         // Adiciona o event listener ao botão
-        if (toogleTheme) {
-            toogleTheme.addEventListener("click", changeTheme);
+        if (toggleTheme) {
+            toggleTheme.addEventListener("click", changeTheme);
         }
 
         // --- Lógica das Animações de Entrada ---

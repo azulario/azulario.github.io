@@ -24,6 +24,13 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
+    <!-- Font Awesome para ícones adicionais -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Material Symbols Outlined para ícones adicionais -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+
     <!-- Schema Markup para LocalBusiness - Ajuda os motores de busca a entenderem seu negócio -->
     <script type="application/ld+json">
     {
@@ -82,6 +89,11 @@
                     </a>
                 </li>
                 <li class="menu__item">
+                    <a class="menu__link" href="#tattoo-care">
+                        <span class="menu__text">Cuidados</span>
+                    </a>
+                </li>
+                <li class="menu__item">
                     <a class="menu__link" href="#faq">
                         <span class="menu__text">FAQ</span>
                     </a>
@@ -95,7 +107,7 @@
 
             <div class="day-night">
                 <a class="day-night-button">
-                    <i id="toggleTheme" class=" toogleTheme bi bi-moon-stars"></i>
+                    <i id="toggleTheme" class="toggleTheme bi bi-moon-stars"></i>
                 </a>
 
             </div>
@@ -113,7 +125,6 @@
         </div>
 
         </nav>
-        
 
         <nav class="header-nav--mobile" aria-label="Menu de navegação móvel">
             <ul class="menu menu--mobile" aria-label="Menu de navegação">
@@ -134,6 +145,14 @@
                         <span class="menu__text">Projetos</span>
                     </a>
                 </li>
+
+                <li class="menu__item">
+                    <a class="menu__link" href="#tattoo-care">
+                        <i class="menu__icon bi bi-bandaid"></i>
+                        <span class="menu__text">Cuidados</span>
+                    </a>
+                </li>
+
                 <li class="menu__item">
                     <a class="menu__link" href="#faq">
                         <i class="menu__icon bi bi-question-octagon"></i>
@@ -289,7 +308,58 @@
                         </a>
                     </div>
             </div>
-            
+
+            <i class="bi bi-star-fill" aria-hidden="true"></i>
+
+            <section class="tattoo-care" id="tattoo-care" aria-label="Cuidados com a Tattoo">
+                <h2 class="section-title fade-in-initial-hidden">Cuidados com a sua nova tattoo: </h2>
+                <div class="tattoo-care-cards">
+                    <div class="care-card fade-in-initial-hidden">
+                        <div class="care-card-tittle">
+                        <span class="material-symbols-outlined">clean_hands
+                        </span>
+                        <h3>HIGIENE:</h3>
+                        </div>
+                        <p>Lave a tatuagem pelo menos 3x ao dia com água fria e sabão neutro. Após a lavagem, seque com papel toalha (sem esfregar) e aplique uma camada fina e transparente de pomada cicatrizante (ex: Cicaplast!).</p>
+                    </div>
+                    <div class="care-card fade-in-initial-hidden">
+                        <div class="care-card-tittle">
+                        <i class="bi bi-droplet-fill"></i>
+                        <h3>DESCAMAÇÃO:</h3>
+                        </div>
+                        <p>Após alguns dias, a tatuagem começa a descamar. Não puxe nem arranque as casquinhas, pois pode causar falhas na pigmentação da sua tattoo.</p>
+                    </div>
+                    <div class="care-card fade-in-initial-hidden">
+                        <div class="care-card-tittle">
+                        <span class="material-symbols-outlined">healing
+                        </span>
+                        <h3>FASE FINAL DA CICATRIZAÇÃO:</h3>
+                        </div>
+                        <p>Na última etapa, mesmo após as casquinhas saírem, ainda existe uma camada de células mortas sobre a pele, o que deixa o desenho com aspecto mais opaco temporariamente. Isso é normal e melhora com o tempo.</p>
+                    </div>
+                    <div class="care-card fade-in-initial-hidden">
+                        <div class="care-card-tittle">
+                        <span class="material-symbols-outlined"> hand_gesture_off
+                        </span>
+                        <h3>COCEIRA:</h3>
+                        </div>
+                        <p>Durante o processo de cicatrização, a tatuagem pode coçar bastante. Evite coçar para não causar lesões na pele ainda sensível. Para aliviar a coceira, você pode aplicar uma compressa gelada ou lavar com água fria.</p>
+                    </div>
+                    <div class="care-card fade-in-initial-hidden">
+                        <div class="care-card-tittle">
+                        <span class="material-symbols-outlined">
+                            do_not_disturb_on
+                        </span>
+                        <h3>EVITE DURANTE TODA A CICATRIZAÇÃO:</h3>
+                        </div>
+                        <ul>
+                            <li>Piscinas, mar ou rios (risco de infecção e comprometimento da cor);</li>
+                            <li>Exposição ao sol direto na área tatuada;</li>
+                            <li>Uso de protetor solar e hidratantes comuns — só devem ser usados após a cicatrização completa.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
 
             <i class="bi bi-star-fill" aria-hidden="true"></i>
             

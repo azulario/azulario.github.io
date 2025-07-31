@@ -463,6 +463,61 @@ h2.cta-projects-text {
 
 }
 
+.tattoo-care {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding: 2.5rem;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.tattoo-care .section-title {
+    color: var(--primary-text-color);
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.tattoo-care-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+    max-width: 600px; /* Limite a largura para melhor leitura */
+}
+
+.care-card {
+    background-color: var(--secondary-bg-color);
+    border-radius: .4rem;
+    padding: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: var(--primary-text-color);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.care-card-tittle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.care-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-text-color);
+}
+
+.care-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--primary-text-color);
+}
+
 .faq {
     display: flex;
     padding: 16px 32px;
