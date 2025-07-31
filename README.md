@@ -6,7 +6,10 @@ Este é o site oficial da Azulario Tattoo, criado por Nathalia Veiga, tatuadora 
 > **Nota pessoal:** Esta é a primeira landing page que desenvolvo do zero! Todo o design, estrutura e código foram feitos por mim, incluindo a prototipagem inicial no Figma. Todas as artes, ilustrações e tatuagens apresentadas na página também são de minha autoria.
 
 ## ✨ Sobre o Projeto
-Landing page responsiva, moderna e otimizada para apresentar portfólio, informações de contato, localização, perguntas frequentes e links para redes sociais. O projeto foi inteiramente planejado e prototipado no Figma antes do desenvolvimento, garantindo uma experiência visual consistente e personalizada.
+Landing page responsiva, moderna e otimizada para apresentar portfólio, informações de contato, localização, perguntas frequentes, cuidados com a tatuagem e links para redes sociais. O projeto foi inteiramente planejado e prototipado no Figma antes do desenvolvimento, garantindo uma experiência visual consistente e personalizada.
+
+## 🩹 Cuidados com a Tatuagem
+Inclui uma seção dedicada a orientações e dicas de cuidados pós-tatuagem, para garantir a melhor cicatrização e durabilidade da sua arte. Todo o conteúdo foi elaborado com base na experiência da tatuadora e pensado para ajudar clientes de primeira viagem e veteranos.
 
 ## 🚀 Tecnologias Utilizadas
 - HTML5

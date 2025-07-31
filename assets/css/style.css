@@ -63,6 +63,7 @@ body::after {
     padding: 1rem;
     gap: 42px;
     width: 100%;
+    position: relative; /* Necessário para o menu fixo */
 }
 
 a {
