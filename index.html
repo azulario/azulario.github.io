@@ -78,39 +78,44 @@
         <nav class="header-nav" aria-label="Navegação Inicial">
             <div class="nav__header">
                 <ul class="menu--desktop" aria-label="Menu de navegação principal">
-                <li class="menu__item">
-                    <a class="menu__link" href="#about-me">
-                        <span class="menu__text">Sobre</span>
-                    </a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="#projects">
-                        <span class="menu__text">Projetos</span>
-                    </a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="#tattoo-care">
-                        <span class="menu__text">Cuidados</span>
-                    </a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="#faq">
-                        <span class="menu__text">FAQ</span>
-                    </a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="#location">
-                        <span class="menu__text">Localização</span>
-                    </a>
-                </li>
-                 </ul>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#home">
+                            <span class="menu__text">Início</span>
+                        </a>
+                    </li> 
+                    <li class="menu__item">
+                        <a class="menu__link" href="#about-me">
+                            <span class="menu__text">Sobre</span>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#projects">
+                            <span class="menu__text">Projetos</span>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#tattoo-care">
+                            <span class="menu__text">Cuidados</span>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#faq">
+                            <span class="menu__text">FAQ</span>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#location">
+                            <span class="menu__text">Localização</span>
+                        </a>
+                    </li>
+                </ul>
 
-            <div class="day-night">
-                <a class="day-night-button">
-                    <i id="toggleTheme" class="toggleTheme bi bi-moon-stars"></i>
-                </a>
+                <div class="day-night">
+                    <a class="day-night-button">
+                        <i id="toggleTheme" class="toggleTheme bi bi-moon-stars"></i>
+                    </a>
 
-            </div>
+                </div>
             </div>
 
             <div class="cta-buttons">
@@ -122,7 +127,7 @@
                     <i class="bi bi-instagram"></i>
                     Me segue lá
                 </a>
-        </div>
+            </div>
 
         </nav>
 
@@ -133,12 +138,15 @@
                         <i class="menu__icon bi bi-house-heart"></i>
                         <span class="menu__text">Início</span>
                     </a>
-                </li> <li class="menu__item">
+                </li> 
+
+                <li class="menu__item">
                     <a class="menu__link" href="#about-me">
                         <i class="menu__icon bi bi-file-person-fill"></i>
                         <span class="menu__text">Sobre</span>
                     </a>
                 </li>
+
                 <li class="menu__item">
                     <a class="menu__link" href="#projects">
                         <i class="menu__icon bi bi-brush"></i>
@@ -159,10 +167,11 @@
                         <span class="menu__text">FAQ</span>
                     </a>
                 </li>
+                
                 <li class="menu__item">
                     <a class="menu__link" href="#location">
                         <i class="menu__icon bi-geo-alt-fill"></i>
-                        <span class="menu__text">Localização</span>
+                        <span class="menu__text">Onde?</span>
                     </a>
                 </li>
 
@@ -314,8 +323,29 @@
             <section class="tattoo-care" id="tattoo-care" aria-label="Cuidados com a Tattoo">
                 <h2 class="section-title fade-in-initial-hidden">Cuidados com a sua nova tattoo: </h2>
                 <div class="tattoo-care-cards">
+                     <div class="care-card fade-in-initial-hidden">
+                        <div class="care-card-title">
+                            <span class="material-symbols-outlined">healing
+                            </span>
+                            <h3>CURATIVO ADESIVO:</h3>
+                        </div>
+                        <p>
+                            Se sua tatuagem foi protegida com curativo adesivo (Tegaderm, TropicalDerm, VitalDerm etc.), siga as orientações:
+                        </p>
+                        <ul>
+                            <li>Mantenha o curativo por até 48h;</li>
+                            <li>Se notar desconforto, vermelhidão fora da área tatuada ou bolhas, remova o curativo imediatamente e siga com os demais cuidados que vêm a seguir.</li>
+                        </ul>
+                        <p>
+                            A remoção correta do curativo adesivo é crucial para a cicatrização.
+                            Assista a este vídeo explicativo da Mavi, minha amiga e colega tatuadora para aprender o passo a passo!
+                        </p>
+                        <a class="bandage-video" href="https://www.instagram.com/reel/CxL26O8xBWh/" target="_blank" class="video-link">
+                            Assista ao vídeo aqui!
+                        </a>
+                    </div>
                     <div class="care-card fade-in-initial-hidden">
-                        <div class="care-card-tittle">
+                        <div class="care-card-title">
                         <span class="material-symbols-outlined">clean_hands
                         </span>
                         <h3>HIGIENE:</h3>
@@ -323,22 +353,23 @@
                         <p>Lave a tatuagem pelo menos 3x ao dia com água fria e sabão neutro. Após a lavagem, seque com papel toalha (sem esfregar) e aplique uma camada fina e transparente de pomada cicatrizante (ex: Cicaplast!).</p>
                     </div>
                     <div class="care-card fade-in-initial-hidden">
-                        <div class="care-card-tittle">
+                        <div class="care-card-title">
                         <i class="bi bi-droplet-fill"></i>
                         <h3>DESCAMAÇÃO:</h3>
                         </div>
                         <p>Após alguns dias, a tatuagem começa a descamar. Não puxe nem arranque as casquinhas, pois pode causar falhas na pigmentação da sua tattoo.</p>
                     </div>
                     <div class="care-card fade-in-initial-hidden">
-                        <div class="care-card-tittle">
-                        <span class="material-symbols-outlined">healing
+                        <div class="care-card-title">
+                        <span class="material-symbols-outlined">
+                            autorenew
                         </span>
                         <h3>FASE FINAL DA CICATRIZAÇÃO:</h3>
                         </div>
                         <p>Na última etapa, mesmo após as casquinhas saírem, ainda existe uma camada de células mortas sobre a pele, o que deixa o desenho com aspecto mais opaco temporariamente. Isso é normal e melhora com o tempo.</p>
                     </div>
                     <div class="care-card fade-in-initial-hidden">
-                        <div class="care-card-tittle">
+                        <div class="care-card-title">
                         <span class="material-symbols-outlined"> hand_gesture_off
                         </span>
                         <h3>COCEIRA:</h3>
@@ -346,7 +377,7 @@
                         <p>Durante o processo de cicatrização, a tatuagem pode coçar bastante. Evite coçar para não causar lesões na pele ainda sensível. Para aliviar a coceira, você pode aplicar uma compressa gelada ou lavar com água fria.</p>
                     </div>
                     <div class="care-card fade-in-initial-hidden">
-                        <div class="care-card-tittle">
+                        <div class="care-card-title">
                         <span class="material-symbols-outlined">
                             do_not_disturb_on
                         </span>

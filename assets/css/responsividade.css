@@ -40,6 +40,13 @@
         background-color: var(--primary-text-color);
     }
 
+    .menu__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
     .menu__item:hover,
     .menu__item:focus {
         border-bottom: none;
@@ -141,6 +148,9 @@
         height: auto;
     }
 
+    .tattoo-care {
+        gap: 4rem;
+    }
 
     .tattoo-photos {
         display: flex;
@@ -249,7 +259,16 @@
     }
 
     .brand-text {
-        padding: 7rem; /* Remove o padding para evitar espaçamento extra */
+        padding: 1rem 7rem; /* Remove o padding para evitar espaçamento extra */
+    }
+
+     .tattoo-care-cards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
     }
 }
 
@@ -262,6 +281,17 @@
 
     h2.projects-title {
         font-size: 1rem;
+    }
+
+    .tattoo-care {
+        padding: 2.5rem 6rem;
+    }
+    
+}
+
+@media screen and (min-width: 1500px) {
+    .tattoo-care {
+        padding: 3.5rem 8rem;
     }
     
 }
