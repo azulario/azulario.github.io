@@ -26,6 +26,16 @@
     /></noscript>
     <!-- End Meta Pixel Code -->
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                if (typeof fbq === 'function') {
+                    fbq('track', 'PageView');
+                }
+            }, 500);
+        });
+    </script>
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
