@@ -25,6 +25,7 @@
             'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '836160527756995');
         fbq('track', 'PageView');
+        console.log('Meta Pixel carregado e PageView enviado');
     </script>
     <noscript><img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=836160527756995&ev=PageView&noscript=1" /></noscript>
@@ -42,6 +43,9 @@
 
     <!-- Animações -->
     <link rel="stylesheet" href="/assets/css/animations.css">
+
+    <!-- Cookie Consent CSS -->
+    <link rel="stylesheet" href="/assets/css/cookie-consent.css">
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
@@ -639,7 +643,26 @@
         <i class="bi bi-whatsapp"></i>
     </a>
 
+    <!-- Aviso de Cookies -->
+    <div id="cookie-consent" class="cookie-consent">
+        <div class="cookie-content">
+            <p class="cookie-text">
+                Este site utiliza cookies para melhorar sua experiência e analisar o tráfego. 
+                Ao aceitar, você concorda com o uso de cookies de acordo com nossa Política de Privacidade.
+            </p>
+            <div class="cookie-buttons">
+                <button id="accept-cookies" class="cookie-btn cookie-btn-accept">
+                    Aceitar Cookies
+                </button>
+                <button id="reject-cookies" class="cookie-btn cookie-btn-reject">
+                    Rejeitar
+                </button>
+            </div>
+        </div>
+    </div>
+
     <script src="/assets/js/animation.js"></script>
+    <script src="/assets/js/cookie-consent.js"></script>
     <script src="/assets/js/tracking.js"></script>
 
 </body>

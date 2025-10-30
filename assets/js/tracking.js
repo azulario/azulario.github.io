@@ -1,14 +1,18 @@
 // Script de rastreamento de eventos do Meta Pixel
-document.addEventListener('DOMContentLoaded', function() {
-  
-  // Rastreia cliques nos botões WhatsApp (Contact - contato iniciado)
-  const whatsappButtons = document.querySelectorAll('.cta-button.whatsapp, .fixed-whatsapp-button, .midia-icon.bi-whatsapp');
-  whatsappButtons.forEach(function(button) {
-    button.addEventListener('click', function() {
-      fbq('track', 'Contact');
-      console.log('Evento Contact (WhatsApp) enviado para o Meta');
+// Só executa se o usuário aceitou os cookies
+const cookieConsent = localStorage.getItem('cookieConsent');
+
+if (cookieConsent === 'accepted' && typeof fbq !== 'undefined') {
+  document.addEventListener('DOMContentLoaded', function() {
+    
+    // Rastreia cliques nos botões WhatsApp (Contact - contato iniciado)
+    const whatsappButtons = document.querySelectorAll('.cta-button.whatsapp, .fixed-whatsapp-button, .midia-icon.bi-whatsapp');
+    whatsappButtons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        fbq('track', 'Contact');
+        console.log('Evento Contact (WhatsApp) enviado para o Meta');
+      });
     });
-  });
 
   // Rastreia cliques nos botões Instagram (Lead - interesse demonstrado)
   const instaButtons = document.querySelectorAll('.cta-button.insta, .cta-button.instagram, .midia-icon.bi-instagram');
@@ -65,3 +69,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+}
