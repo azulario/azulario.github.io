@@ -4,21 +4,23 @@
 
 /* Estado inicial oculto */
 .fade-in-initial-hidden {
-    opacity: 0;
-    transform: translateY(20px);
+    opacity: 0 !important;
+    transform: translateY(40px) !important;
+    visibility: hidden;
 }
 
 /* Dispara animação fadeInUp */
 .fadeInUp-active {
-    animation: fadeInUp 0.8s ease-in forwards;
+    visibility: visible;
+    animation: fadeInUp 1s ease-out forwards;
 }
 
 @keyframes fadeInUp {
-    from {
+    0% {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(40px);
     }
-    to {
+    100% {
         opacity: 1;
         transform: translateY(0);
     }

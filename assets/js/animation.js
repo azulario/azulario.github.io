@@ -53,19 +53,56 @@
             toggleTheme.addEventListener("click", changeTheme);
         }
 
-        // --- Lógica das Animações de Entrada ---
-        document.addEventListener("DOMContentLoaded", () => {
-            // Seleciona todos os elementos que devem animar ao carregar
+        // Aplica as imagens corretas ao carregar
+        applyThemeImages();
+
+        // --- Lógica das Animações de Entrada com Scroll ---
+        // Função para inicializar animações com scroll
+        function initScrollAnimations() {
+            // Seleciona todos os elementos que devem animar ao fazer scroll
             const elementsToAnimate = document.querySelectorAll(".fade-in-initial-hidden");
 
-            elementsToAnimate.forEach((element, index) => {
-                // Usa um pequeno timeout para garantir que o navegador renderizou o estado inicial
-                // antes que a classe de animação seja adicionada. Isso ajuda a disparar a animação.
-                // Adiciona um pequeno atraso para um efeito escalonado mais agradável.
-                setTimeout(() => {
-                    element.classList.remove("fade-in-initial-hidden");
-                    element.classList.add("fadeInUp-active"); // Adiciona a classe de animação ativa
-                }, 50 + (index * 50)); // Começa após 50ms, depois 50ms de atraso por elemento
+            console.log(`Encontrados ${elementsToAnimate.length} elementos para animar com scroll`);
+
+            if (elementsToAnimate.length === 0) {
+                console.warn("Nenhum elemento com classe 'fade-in-initial-hidden' encontrado");
+                return;
+            }
+
+            // Cria o Intersection Observer
+            const observerOptions = {
+                root: null, // usa o viewport
+                rootMargin: '0px 0px -100px 0px', // começa a animar 100px antes do elemento aparecer
+                threshold: 0.1 // 10% do elemento precisa estar visível
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        // Adiciona um pequeno delay para o efeito ser mais suave
+                        setTimeout(() => {
+                            entry.target.classList.remove("fade-in-initial-hidden");
+                            entry.target.classList.add("fadeInUp-active");
+                            console.log('Elemento animado:', entry.target);
+                        }, 100);
+                        
+                        // Para de observar este elemento após animar
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            // Observa todos os elementos
+            elementsToAnimate.forEach((element) => {
+                observer.observe(element);
             });
-        });
+        }
+
+        // Aguarda o DOM estar completamente carregado
+        if (document.readyState === 'loading') {
+            document.addEventListener("DOMContentLoaded", initScrollAnimations);
+        } else {
+            // DOM já está carregado
+            initScrollAnimations();
+        }
         // --- Fim da Lógica das Animações de Entrada ---

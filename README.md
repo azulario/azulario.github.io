@@ -11,6 +11,13 @@ Landing page responsiva, moderna e otimizada para apresentar portfólio, informa
 ## 🩹 Cuidados com a Tatuagem
 Inclui uma seção dedicada a orientações e dicas de cuidados pós-tatuagem, para garantir a melhor cicatrização e durabilidade da sua arte. Todo o conteúdo foi elaborado com base na experiência da tatuadora e pensado para ajudar clientes de primeira viagem e veteranos.
 
+## 🍪 Sistema de Cookies e Rastreamento
+O site possui um sistema completo de consentimento de cookies em conformidade com a LGPD:
+- Aviso de cookies na primeira visita
+- Opção de aceitar ou rejeitar rastreamento
+- Integração com Meta Pixel (Facebook Pixel) para análise de conversões
+- Rastreamento de eventos: Contact (WhatsApp), Lead (Instagram), ViewContent (portfólio), entre outros
+- Escolha do usuário salva no navegador
 
 ## 🚀 Tecnologias Utilizadas
 - HTML5
@@ -19,6 +26,7 @@ Inclui uma seção dedicada a orientações e dicas de cuidados pós-tatuagem, p
 - [Bootstrap Icons](https://icons.getbootstrap.com/)
 - [Font Awesome](https://fontawesome.com/) (ícones adicionais)
 - [Material Symbols Outlined](https://fonts.google.com/icons) (ícones adicionais)
+- Meta Pixel (rastreamento de conversões)
 
 ## 📱 Responsividade
 O site se adapta a diferentes tamanhos de tela, exibindo menus e conteúdos otimizados para desktop e mobile.
@@ -30,8 +38,8 @@ Veja o protótipo visual criado antes do desenvolvimento:
 
 ## 📂 Estrutura de Pastas
 - `index.html` — Página principal
-- `assets/css/` — Estilos (reset, base, responsividade, animações)
-- `assets/js/` — Scripts JS
+- `assets/css/` — Estilos (reset, base, responsividade, animações, cookie-consent)
+- `assets/js/` — Scripts JS (animações, gerenciamento de cookies, tracking de eventos)
 - `assets/imgs/` — Imagens, logos e ilustrações
 - `favicon.ico` — Ícone do site
 
